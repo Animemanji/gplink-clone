@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Shortener</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>URL Shortener</h1>
+        <p>Enter your URL below to shorten it.</p>
+        <form action="/shorten" method="POST">
+            <input type="url" name="long_url" placeholder="Enter your URL here" required>
+            <button type="submit">Shorten URL</button>
+        </form>
+
+        <!-- Display the shortened URL if available -->
+        {% if short_url %}
+        <div class="short-url">
+            <p>Your shortened URL:</p>
+            <a href="{{ short_url }}" target="_blank">{{ short_url }}</a>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>

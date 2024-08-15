@@ -1,0 +1,124 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
+}
+
+/* Header Styling */
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+header h1 {
+    text-align: center;
+    margin: 0;
+}
+
+header nav {
+    margin-top: 10px;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content Styling */
+main {
+    margin-top: 20px;
+}
+
+h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+input[type="url"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Ad Container Styling */
+.ad-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.ad-space img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+#countdown {
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+/* Redirect Container Styling */
+.redirect-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Footer Styling */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 50px;
+}

@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block title %}View Ad{% endblock %}
+
+{% block content %}
+<div class="ad-container">
+    <h2>Advertisement</h2>
+    <p>Please wait for a few seconds while your link is being prepared...</p>
+
+    <!-- Advertisement Image -->
+    <div class="ad-space">
+        <img src="https://i.postimg.cc/B6pNgb7W/IMG-20240813-235527-655.png" alt="Ad" style="max-width: 100%; height: auto;">
+    </div>
+
+    <!-- Countdown Timer -->
+    <div id="countdown">
+        Redirecting in <span id="timer">10</span> seconds...
+    </div>
+
+    <!-- Button to manually redirect (if allowed) -->
+    <form action="{{ redirect_url }}" method="GET">
+        <button id="redirect-btn" type="submit" disabled>Go to Link</button>
+    </form>
+</div>
+
+<script src="/static/js/scripts.js"></script>
+<script>
+    // Countdown Timer Logic
+    let timeLeft = 10;
+    const timer = document.getElementById('timer');
+    const redirectBtn = document.getElementById('redirect-btn');
+
+    const countdown = setInterval(() => {
+        timeLeft--;
+        timer.textContent = timeLeft;
+
+        if (timeLeft <= 0) {
+            clearInterval(countdown);
+            redirectBtn.disabled = false;
+            redirectBtn.click(); // Auto-redirect when time is up
+        }
+    }, 1000);
+</script>
+{% endblock %}

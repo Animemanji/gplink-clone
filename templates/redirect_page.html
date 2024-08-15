@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Redirecting...{% endblock %}
+
+{% block content %}
+<div class="redirect-container">
+    <h2>You're Being Redirected</h2>
+    <p>Your link is ready! Click the button below to proceed.</p>
+
+    <!-- Redirect Button -->
+    <form action="{{ redirect_url }}" method="GET">
+        <button id="proceed-btn" type="submit">Proceed to Link</button>
+    </form>
+</div>
+{% endblock %}
