@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/dashboard">Dashboard</a></li>
+                <li><a href="/logout">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Welcome to Your Dashboard</h1>
+
+        <section class="dashboard-links">
+            <h2>Your Shortened Links</h2>
+            <ul>
+                <li><a href="/link1">http://yourdomain.com/link1</a></li>
+                <li><a href="/link2">http://yourdomain.com/link2</a></li>
+                <li><a href="/link3">http://yourdomain.com/link3</a></li>
+                <!-- More links -->
+            </ul>
+        </section>
+
+        <section class="create-link">
+            <h2>Create a New Shortened Link</h2>
+            <form action="/create-link" method="POST">
+                <label for="original-url">Original URL:</label>
+                <input type="url" id="original-url" name="original_url" required>
+
+                <label for="custom-alias">Custom Alias (optional):</label>
+                <input type="text" id="custom-alias" name="custom_alias">
+
+                <button type="submit">Shorten URL</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Your Company Name. All rights reserved.</p>
+    </footer>
+</body>
+</html>
